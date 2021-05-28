@@ -1,0 +1,110 @@
+"A:\Research Assistant\MNIST C1\venv\Scripts\python.exe" "A:/Research Assistant/MNIST C1/main.py"
+2021-05-27 18:56:59.205172: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2021-05-27 18:56:59.205285: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+2021-05-27 18:57:01.119175: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2021-05-27 18:57:01.119279: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-05-27 18:57:01.121589: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-04NE6UJ
+2021-05-27 18:57:01.121713: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-04NE6UJ
+2021-05-27 18:57:01.122149: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Please add `keras.layers.InputLayer` instead of `keras.Input` to Sequential model. `keras.Input` is intended to be used by Functional model.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 784)               0         
+_________________________________________________________________
+dense (Dense)                (None, 210)               164850    
+_________________________________________________________________
+dropout (Dropout)            (None, 210)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 210)               44310     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 210)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 210)               44310     
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 210)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 210)               44310     
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 210)               0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 210)               44310     
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 210)               0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 10)                2110      
+=================================================================
+Total params: 344,200
+Trainable params: 344,200
+Non-trainable params: 0
+_________________________________________________________________
+2021-05-27 18:57:01.195144: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/15
+422/422 [==============================] - 2s 4ms/step - loss: 1.3238 - accuracy: 0.6240 - val_loss: 0.4586 - val_accuracy: 0.9420
+Epoch 2/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.6246 - accuracy: 0.8933 - val_loss: 0.3671 - val_accuracy: 0.9592
+Epoch 3/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.5213 - accuracy: 0.9189 - val_loss: 0.3257 - val_accuracy: 0.9673
+Epoch 4/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.4758 - accuracy: 0.9297 - val_loss: 0.3064 - val_accuracy: 0.9685
+Epoch 5/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.4393 - accuracy: 0.9358 - val_loss: 0.2875 - val_accuracy: 0.9722
+Epoch 6/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.4128 - accuracy: 0.9396 - val_loss: 0.2735 - val_accuracy: 0.9733
+Epoch 7/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3916 - accuracy: 0.9443 - val_loss: 0.2602 - val_accuracy: 0.9762
+Epoch 8/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3737 - accuracy: 0.9477 - val_loss: 0.2551 - val_accuracy: 0.9742
+Epoch 9/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3665 - accuracy: 0.9483 - val_loss: 0.2461 - val_accuracy: 0.9777
+Epoch 10/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3564 - accuracy: 0.9498 - val_loss: 0.2463 - val_accuracy: 0.9753
+Epoch 11/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3515 - accuracy: 0.9509 - val_loss: 0.2436 - val_accuracy: 0.9775
+Epoch 12/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3447 - accuracy: 0.9514 - val_loss: 0.2385 - val_accuracy: 0.9767
+Epoch 13/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3388 - accuracy: 0.9526 - val_loss: 0.2461 - val_accuracy: 0.9742
+Epoch 14/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3373 - accuracy: 0.9537 - val_loss: 0.2373 - val_accuracy: 0.9773
+Epoch 15/15
+422/422 [==============================] - 1s 3ms/step - loss: 0.3344 - accuracy: 0.9536 - val_loss: 0.2339 - val_accuracy: 0.9790
+Test loss: 0.26354822516441345
+Test accuracy: 0.9732000231742859
+
+Process finished with exit code 0
+
+
+
+model = keras.Sequential(
+    [
+        keras.Input(shape=input_shape),
+
+        layers.Flatten(),
+        # layers.Dropout(0.5),
+
+        layers.Dense(210, activation='ReLU', kernel_regularizer=regularizers.l1_l2(l1=0.00001, l2=0.0001)),
+        layers.Dropout(0.5),
+        layers.Dense(210, activation='ReLU', kernel_regularizer=regularizers.l1_l2(l1=0.00001, l2=0.0001)),
+        layers.Dropout(0.5),
+        layers.Dense(210, activation='ReLU', kernel_regularizer=regularizers.l1_l2(l1=0.00001, l2=0.0001)),
+        layers.Dropout(0.5),
+        layers.Dense(210, activation='ReLU', kernel_regularizer=regularizers.l1_l2(l1=0.00001, l2=0.0001)),
+        layers.Dropout(0.5),
+        layers.Dense(210, activation='ReLU', kernel_regularizer=regularizers.l1_l2(l1=0.00001, l2=0.0001)),
+        layers.Dropout(0.5),
+        layers.Dense(num_classes, activation="softmax"),
+    ]
+)
+
+model.summary()
+
+batch_size = 128
+epochs = 15
+
+

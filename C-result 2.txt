@@ -1,0 +1,80 @@
+"A:\Research Assistant\MNIST C1\venv\Scripts\python.exe" "A:/Research Assistant/MNIST C1/main.py"
+2021-05-27 18:39:38.504567: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2021-05-27 18:39:38.504680: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+2021-05-27 18:39:40.413595: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2021-05-27 18:39:40.413724: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-05-27 18:39:40.415913: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-04NE6UJ
+2021-05-27 18:39:40.416026: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-04NE6UJ
+2021-05-27 18:39:40.416389: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Please add `keras.layers.InputLayer` instead of `keras.Input` to Sequential model. `keras.Input` is intended to be used by Functional model.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 784)               0         
+_________________________________________________________________
+dropout (Dropout)            (None, 784)               0         
+_________________________________________________________________
+dense (Dense)                (None, 250)               196250    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 250)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 210)               52710     
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 210)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 210)               44310     
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 210)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 210)               44310     
+_________________________________________________________________
+dense_4 (Dense)              (None, 180)               37980     
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 180)               0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 10)                1810      
+=================================================================
+Total params: 377,370
+Trainable params: 377,370
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/15
+2021-05-27 18:39:40.488260: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+422/422 [==============================] - 2s 4ms/step - loss: 1.4666 - accuracy: 0.5805 - val_loss: 0.5443 - val_accuracy: 0.9282
+Epoch 2/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.8101 - accuracy: 0.8349 - val_loss: 0.4213 - val_accuracy: 0.9498
+Epoch 3/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.6882 - accuracy: 0.8702 - val_loss: 0.3699 - val_accuracy: 0.9618
+Epoch 4/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.6188 - accuracy: 0.8881 - val_loss: 0.3481 - val_accuracy: 0.9658
+Epoch 5/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.5760 - accuracy: 0.8982 - val_loss: 0.3233 - val_accuracy: 0.9688
+Epoch 6/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.5460 - accuracy: 0.9044 - val_loss: 0.3100 - val_accuracy: 0.9705
+Epoch 7/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.5231 - accuracy: 0.9087 - val_loss: 0.2933 - val_accuracy: 0.9712
+Epoch 8/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.5049 - accuracy: 0.9115 - val_loss: 0.2840 - val_accuracy: 0.9730
+Epoch 9/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4944 - accuracy: 0.9146 - val_loss: 0.2777 - val_accuracy: 0.9740
+Epoch 10/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4812 - accuracy: 0.9170 - val_loss: 0.2798 - val_accuracy: 0.9735
+Epoch 11/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4765 - accuracy: 0.9186 - val_loss: 0.2665 - val_accuracy: 0.9767
+Epoch 12/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4632 - accuracy: 0.9201 - val_loss: 0.2707 - val_accuracy: 0.9750
+Epoch 13/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4575 - accuracy: 0.9214 - val_loss: 0.2651 - val_accuracy: 0.9748
+Epoch 14/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4551 - accuracy: 0.9225 - val_loss: 0.2687 - val_accuracy: 0.9743
+Epoch 15/15
+422/422 [==============================] - 2s 4ms/step - loss: 0.4512 - accuracy: 0.9223 - val_loss: 0.2572 - val_accuracy: 0.9765
+Test loss: 0.27676671743392944
+Test accuracy: 0.9710999727249146
+
+Process finished with exit code 0

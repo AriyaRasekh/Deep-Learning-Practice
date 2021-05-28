@@ -1,0 +1,70 @@
+"A:\Research Assistant\MNIST A\venv\Scripts\python.exe" "A:/Research Assistant/MNIST A/main.py"
+2021-05-27 14:11:02.432576: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2021-05-27 14:11:02.432842: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+2021-05-27 14:11:10.227478: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2021-05-27 14:11:10.227779: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-05-27 14:11:10.234893: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-04NE6UJ
+2021-05-27 14:11:10.235188: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-04NE6UJ
+2021-05-27 14:11:10.236850: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Please add `keras.layers.InputLayer` instead of `keras.Input` to Sequential model. `keras.Input` is intended to be used by Functional model.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 26, 26, 32)        320       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 13, 13, 32)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 11, 11, 64)        18496     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 5, 5, 64)          0         
+_________________________________________________________________
+flatten (Flatten)            (None, 1600)              0         
+_________________________________________________________________
+dropout (Dropout)            (None, 1600)              0         
+_________________________________________________________________
+dense (Dense)                (None, 10)                16010     
+=================================================================
+Total params: 34,826
+Trainable params: 34,826
+Non-trainable params: 0
+_________________________________________________________________
+2021-05-27 14:11:10.457690: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/15
+422/422 [==============================] - 25s 58ms/step - loss: 0.3556 - accuracy: 0.8940 - val_loss: 0.0784 - val_accuracy: 0.9772
+Epoch 2/15
+422/422 [==============================] - 24s 56ms/step - loss: 0.1133 - accuracy: 0.9653 - val_loss: 0.0625 - val_accuracy: 0.9832
+Epoch 3/15
+422/422 [==============================] - 23s 55ms/step - loss: 0.0845 - accuracy: 0.9740 - val_loss: 0.0468 - val_accuracy: 0.9885
+Epoch 4/15
+422/422 [==============================] - 24s 56ms/step - loss: 0.0704 - accuracy: 0.9786 - val_loss: 0.0490 - val_accuracy: 0.9865
+Epoch 5/15
+422/422 [==============================] - 24s 58ms/step - loss: 0.0630 - accuracy: 0.9808 - val_loss: 0.0397 - val_accuracy: 0.9893
+Epoch 6/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0579 - accuracy: 0.9817 - val_loss: 0.0373 - val_accuracy: 0.9907
+Epoch 7/15
+422/422 [==============================] - 24s 56ms/step - loss: 0.0509 - accuracy: 0.9841 - val_loss: 0.0355 - val_accuracy: 0.9905
+Epoch 8/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0471 - accuracy: 0.9855 - val_loss: 0.0318 - val_accuracy: 0.9907
+Epoch 9/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0435 - accuracy: 0.9863 - val_loss: 0.0324 - val_accuracy: 0.9903
+Epoch 10/15
+422/422 [==============================] - 23s 55ms/step - loss: 0.0425 - accuracy: 0.9859 - val_loss: 0.0322 - val_accuracy: 0.9915
+Epoch 11/15
+422/422 [==============================] - 24s 56ms/step - loss: 0.0396 - accuracy: 0.9873 - val_loss: 0.0309 - val_accuracy: 0.9913
+Epoch 12/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0372 - accuracy: 0.9880 - val_loss: 0.0317 - val_accuracy: 0.9917
+Epoch 13/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0356 - accuracy: 0.9885 - val_loss: 0.0288 - val_accuracy: 0.9923
+Epoch 14/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0346 - accuracy: 0.9891 - val_loss: 0.0300 - val_accuracy: 0.9908
+Epoch 15/15
+422/422 [==============================] - 24s 57ms/step - loss: 0.0318 - accuracy: 0.9895 - val_loss: 0.0288 - val_accuracy: 0.9910
+Test loss: 0.02834116481244564
+Test accuracy: 0.991599977016449
+
+Process finished with exit code 0
