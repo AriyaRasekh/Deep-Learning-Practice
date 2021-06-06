@@ -37,6 +37,22 @@ model = keras.Sequential(
         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
         layers.Dropout(0.25),
         layers.MaxPooling2D(pool_size=(2, 2), padding='same'),
+        
+#         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
+#         layers.Dropout(0.25),
+#         layers.MaxPooling2D(pool_size=(2, 2), padding='same'),
+#         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
+#         layers.Dropout(0.25),
+#         layers.MaxPooling2D(pool_size=(2, 2), padding='same'),
+#         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
+#         layers.Dropout(0.25),
+#         layers.MaxPooling2D(pool_size=(2, 2), padding='same'),
+#         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
+#         layers.Dropout(0.25),
+#         layers.MaxPooling2D(pool_size=(2, 2), padding='same'),
+#         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
+#         layers.Dropout(0.25),
+#         layers.MaxPooling2D(pool_size=(2, 2), padding='same'),
 
 
         layers.Conv2D(64, kernel_size=(3, 3), activation="relu", padding='same'),
